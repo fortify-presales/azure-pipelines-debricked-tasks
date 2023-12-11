@@ -1,0 +1,51 @@
+{
+  "id": "7426d175-1707-400d-b74b-fada5b6442e3",
+  "name": "DebrickedInstaller",
+  "friendlyName": "Install Debricked CLI",
+  "description": "Install a specified version of the Debricked CLI utility",
+  "helpMarkDown": "[Learn more about this task](https://github.com/fortify-presales/azure-pipelines-debricked-tasks)",
+  "category": "Tool",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "author": "Fortify Pre-Sales",
+  "version": {
+    "Major": 0,
+    "Minor": 1,
+    "Patch": 0
+  },
+  "preview": true,
+  "demands": [],
+  "groups": [],
+  "inputs": [
+    {
+      "name": "version",
+      "label": "Version",
+      "type": "string",
+      "helpMarkDown": "Specify the version of debricked to install. Ex:<br><br>v1.5.1<br>latest",
+      "defaultValue": "latest"
+    }
+  ],
+  "instanceNameFormat": "Install debricked $(version)",
+  "execution": {
+    "Node10": {
+      "target": "src/debrickedInstaller.js"
+    },
+    "Node16": {
+      "target": "src/debrickedInstaller.js",
+      "argumentFormat": ""
+    }
+  },
+  "messages": {
+    "ErrorFetchingLatestVersion": "An error occurred while fetching the latest version info from %s. Error: %s. Downloading default stable version: %s.",
+    "FindingLatestDebrickedVersion": "Finding latest debricked version...",
+    "DebrickedDownloadFailed": "Failed to download debricked from location %s. Error %s.",
+    "LatestDebrickedVersion": "Latest version is %s",
+    "NotAValidVersion": "Version not specified in correct format. Ex: v1.5.1, latest",
+    "NotAValidSemverVersion": "Version not specified in correct format. Ex: v1.5.1, latest",
+    "SuccessfullyDownloaded": "Successfully downloaded debricked %s. Download path: %s.",
+    "VerifyingDebrickedInstallation": "Verifying debricked installation...",
+    "VersionAlreadyInstalled": "debricked version %s is already installed. Installation path: %s."
+  }
+}

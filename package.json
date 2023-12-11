@@ -1,0 +1,22 @@
+{
+  "name": "azure-pipelines-tasks",
+  "description": "This extension includes various Debricked Azure Pipelines tasks. debricked is Debricked's command line interface. It brings open source security, compliance and health to your project via the command prompt.",
+  "version": "0.1.0",
+  "scripts": {
+    "install": "node all.js install",
+    "build": "node all.js run build",
+    "package": "tfx extension create --manifest-globs vss-extension.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fortify-presales/azure-pipelines-debricked-tasks.git"
+  },
+  "keywords": [],
+  "author": "fortify-presales",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/fortify-presales/azure-pipelines-debricked-tasks/issues"
+  },
+  "homepage": "https://github.com/fortify-presales/azure-pipelines-debricked-tasks"
+}

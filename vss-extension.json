@@ -1,0 +1,41 @@
+{
+  "manifestVersion": 1,
+  "id": "azure-pipelines-debricked-tasks",
+  "name": "Debricked CLI Tasks",
+  "version": "0.1.0",
+  "publisher": "fortify-presales",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "description": "This extension includes various Azure Pipelines Tasks for integrating with the Debricked CLI tool.\n",
+  "categories": [
+    "Azure Pipelines"
+  ],
+  "content": {
+    "details": {
+      "path": "marketplace.md"
+    }
+  },
+  "icons": {
+    "default": "images/extension-icon.png"
+  },
+  "files": [
+    {
+      "path": "Tasks/DebrickedInstallerV0"
+    }
+  ],
+  "contributions": [
+    {
+      "id": "DebrickedInstallerV0",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "Tasks/DebrickedInstallerV0"
+      }
+    }
+  ]
+}
